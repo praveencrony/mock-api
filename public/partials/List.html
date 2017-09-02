@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+<div class="col-md-8">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in userList">
+            <td>{{ x.fname }}</td>
+            <td>{{ x.lname }}</td>
+            <td>{{ x.email }}</td>
+            <td>{{ x.username }}</td>
+            </tr>
+        <tbody>
+      </table>
+</div>
+</div>
+</div>
