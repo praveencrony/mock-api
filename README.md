@@ -1,8 +1,18 @@
+# Mock API Node with Angular JS
+
+## Instructions To Run the App in local
+
 * Git Clone
 * npm install
 * npm start
 * App will be run in http://localhost:8000
 
+## Deployed to Heroku
+
+* This app is deployed to heroku.
+    https://mockapii.herokuapp.com/
+
+## API
 * Apart from the App we can create users and getusers list using below api's
 
 * http://localhost:8000/register -- Create user 
