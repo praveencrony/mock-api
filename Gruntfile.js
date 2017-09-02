@@ -5,21 +5,46 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
 
-        babel: {
-            options: {
-            sourceMap: true,
-            presets: ['es2015']
-            },
-
-        dist: {
-            files: {
-            'public/js/build/indexHandler.js': 'public/js/indexHandler.js'
-            }
-        }
-    }
+        uglify: {
+			options: {
+				},
+				build: {
+					files: [{
+						expand: true,
+						flatten: false,
+						cwd: 'www/wp-content/themes/krds/',
+						ext: '.js',
+						src: ['**/*.js', '!*.min.js'],
+						filter: 'isFile',
+						dest: 'www/wp-content/themes/krds/'
+					}]
+				}
+		},
+			
+		cssmin: {
+			 build: {
+				  files: [{
+					expand: true,
+					flatten: false,
+					cwd: 'www/wp-content/themes/krds/',
+					ext: '.css',
+					src: ['**/*.css', '!*.min.css'],
+					filter: 'isFile',
+					dest: 'www/wp-content/themes/krds/'
+					
+				  }]
+				}
+		},
 });
 
-    grunt.loadNpmTasks('grunt-babel');
-    grunt.registerTask('build', ['babel']);
+grunt.loadNpmTasks('grunt-contrib-cssmin');
+grunt.loadNpmTasks('grunt-contrib-uglify');
+
+grunt.registerTask('production', 
+        [
+        'uglify:build', 
+        'cssmin:build'
+
+        ]);
 
 };
