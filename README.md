@@ -1,6 +1,6 @@
-# Mock API Node with Angular JS
+# Mock API Node with Angular JS and Grunt
 
-## Instructions To Run the App in local
+## Instructions to run the app in local
 
 * Git Clone
 * npm install
