@@ -3,7 +3,7 @@
 * npm start
 * App will be run in http://localhost:8000
 
-* see the APi's apart form the App also.
+* Apart from the App we can create users and getusers list using below api's
 
 * http://localhost:8000/register -- Create user 
 
