@@ -12,11 +12,11 @@ module.exports = function(grunt) {
 					files: [{
 						expand: true,
 						flatten: false,
-						cwd: 'www/wp-content/themes/krds/',
+						cwd: 'public/',
 						ext: '.js',
 						src: ['**/*.js', '!*.min.js'],
 						filter: 'isFile',
-						dest: 'www/wp-content/themes/krds/'
+						dest: 'public/'
 					}]
 				}
 		},
@@ -26,11 +26,11 @@ module.exports = function(grunt) {
 				  files: [{
 					expand: true,
 					flatten: false,
-					cwd: 'www/wp-content/themes/krds/',
+					cwd: 'public/',
 					ext: '.css',
 					src: ['**/*.css', '!*.min.css'],
 					filter: 'isFile',
-					dest: 'www/wp-content/themes/krds/'
+					dest: 'public/'
 					
 				  }]
 				}

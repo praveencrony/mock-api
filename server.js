@@ -113,7 +113,7 @@ app.use(function(err, req, res, next) {
 //Port Config
 const server      = require('http').Server(app);
 const serverIp    = process.env.APP_IP || '0.0.0.0';
-const serverPort  =  '4000';
+const serverPort  =  process.env.PORT || 8080;
 
 server.listen(serverPort, serverIp);
 
